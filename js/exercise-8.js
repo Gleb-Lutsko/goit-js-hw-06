@@ -5,12 +5,14 @@ function formSubmit(event) {
     const password = event.currentTarget.elements.password.value;
     if (email === '' || password === '') {
         window.alert('Заповніть поля ввода')
-    }
-    const formResult = {
+    } else {
+        const formResult = {
         email,
         password
+        }
+        console.log(formResult)
     }
-    console.log(formResult)
+    
     event.currentTarget.reset();
 }
 form.addEventListener('submit', formSubmit)
